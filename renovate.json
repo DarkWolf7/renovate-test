@@ -7,6 +7,7 @@
   "masterIssueAutoclose": true,
   "rebaseStalePrs": true,
   "recreateClosed": true,
+  "baseBranches": ["main"],
   "docker": {
     "pinDigests": true,
     "packageRules": [
