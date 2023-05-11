@@ -8,6 +8,7 @@
   "rebaseStalePrs": true,
   "recreateClosed": true,
   "baseBranches": ["main"],
+  "ignoreTests": true,
   "docker": {
     "pinDigests": true,
     "packageRules": [
