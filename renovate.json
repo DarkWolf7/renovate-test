@@ -16,7 +16,7 @@
         "groupName": "automerge-docker-patch",
         "groupSlug": "all-docker-patch",
         "matchUpdateTypes": [
-          "patch","minor","digest"
+          "patch"
         ],
         "matchCurrentVersion": "!/^0/",
         "platformAutomerge": true,
