@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:focal-20230308
 #no comment
 #still no comment
 
