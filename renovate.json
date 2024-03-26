@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "configWarningReuseIssue": false,
-  "extends": [ "config:base" ],
+  "extends": ["config:base"],
   "dependencyDashboard": true,
   "masterIssue": true,
   "masterIssueAutoclose": true,
@@ -16,7 +16,7 @@
         "groupName": "automerge-docker-patch",
         "groupSlug": "all-docker-patch",
         "major": {
-           "automerge": false
+          "automerge": false
         },
         "matchCurrentVersion": "!/^0/",
         "platformAutomerge": true,
@@ -25,5 +25,34 @@
         "commitMessageSuffix": "[SECURITY]"
       }
     ]
-  }
+  },
+  "customDatasources": {
+    "curl": {
+      "defaultRegistryUrlTemplate": "https://git.soma.salesforce.com/pages/monitoring/collection-docs/docs/monitor-your-data/application-performance-monitoring/installation-and-configuration/java-monitoring/requirements#compatibility-matrix",
+      "format": "html"
+    }
+  },
+  "packageRules": [
+    {
+      "matchDatasources": ["custom.curl"],
+      "matchPackageNames": ["agent"],
+      "extractVersion": "https://github.com/open-telemetry/opentelemetry-java/releases/tag/v(?<version>.+)$"
+    },
+    {
+      "matchDatasources": ["custom.curl"],
+      "matchPackageNames": ["extension"],
+      "extractVersion": "https://git.soma.salesforce.com/monitoring/salesforce-opentelemetry-exporter-java/releases/tag/v(?<version>.+)$"
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["Dockerfile$"],
+      "datasourceTemplate": "custom.curl",
+      "matchStrings": [
+        "#\\s*renovate:\\s*(datasource=(?<datasource>.*?)\\s*)?depName=(?<depName>.*?)(\\s*versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"(?<currentValue>.*)\"\\s"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+    }
+  ]
 }
