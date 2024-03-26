@@ -21,7 +21,7 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["dockerfile/Dockerfile$"],
+      "fileMatch": ["Dockerfile$"],
       "datasourceTemplate": "custom.curl",
       "matchStrings": [
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"(?<currentValue>.*)\"\\s"
