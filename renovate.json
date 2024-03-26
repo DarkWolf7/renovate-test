@@ -28,7 +28,7 @@
   },
   "customDatasources": {
     "curl": {
-      "defaultRegistryUrlTemplate": "https://git.soma.salesforce.com/pages/monitoring/collection-docs/docs/monitor-your-data/application-performance-monitoring/installation-and-configuration/java-monitoring/requirements#compatibility-matrix",
+      "defaultRegistryUrlTemplate": "https://git.soma.salesforce.com/pages/monitoring/collection-docs/docs/monitor-your-data/application-performance-monitoring/installation-and-configuration/java-monitoring/requirements",
       "format": "html"
     }
   },
