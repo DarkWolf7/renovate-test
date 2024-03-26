@@ -36,12 +36,12 @@
     {
       "matchDatasources": ["custom.curl"],
       "matchPackageNames": ["agent"],
-      "extractVersion": "https://github.com/open-telemetry/opentelemetry-java/releases/tag/v(?<version>.+)$"
+      "extractVersion": "open-telemetry/opentelemetry-java/releases/tag/v(?<version>.+)$"
     },
     {
       "matchDatasources": ["custom.curl"],
       "matchPackageNames": ["extension"],
-      "extractVersion": "https://git.soma.salesforce.com/monitoring/salesforce-opentelemetry-exporter-java/releases/tag/v(?<version>.+)$"
+      "extractVersion": "salesforce-opentelemetry-exporter-java/releases/tag/v(?<version>.+)$"
     }
   ],
   "customManagers": [
