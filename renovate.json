@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "configWarningReuseIssue": false,
-  "extends": ["config:base"],
+  "extends": [ "config:base" ],
   "dependencyDashboard": true,
   "masterIssue": true,
   "masterIssueAutoclose": true,
